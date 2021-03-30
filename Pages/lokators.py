@@ -37,7 +37,42 @@ class SeazonvarLocators():
     BUTTON = (By.XPATH, '//button[@class="btn head-btn"]')
     RESULTS_SEARCH = (By.CSS_SELECTOR, '.pgs-search-title')
     BUTTON_LOGIN_IN_SAIT = (By.CSS_SELECTOR, '[href="/?mod=login"]')
-    BLOCK_LOGIN = (By.CSS_SELECTOR, '.pgs-search-title')
+    BLOCK_LOGIN = (By.CSS_SELECTOR, '[class="content-wrap minheight"]')
+    BUTTON_REGISTRATION = (By.CSS_SELECTOR, '[href="/?mod=reg"]')
+    BLOCK_REGISTRATION = (By.CSS_SELECTOR, '[class="content-wrap minheight"]')
+
+class StoreLokators():
+    BUTTON_LOGIN = (By.CSS_SELECTOR, ".login")
+    INPUT_EMAIL = (By.CSS_SELECTOR, '#email_create')
+    BUTTON_CREATE = (By.CSS_SELECTOR, '#SubmitCreate')
+
+    NAME = (By.CSS_SELECTOR, '#customer_firstname')
+    LAST_NAME = (By.CSS_SELECTOR, '#customer_lastname')
+    PASSWORD = (By.CSS_SELECTOR, '#passwd')
+    ADRESS = (By.CSS_SELECTOR, '#address1')
+    CITY = (By.CSS_SELECTOR, '#city')
+    SHTAT = (By.CSS_SELECTOR, '#id_state')
+    VALUE = (By.CSS_SELECTOR, 'value="1"')
+    POST = (By.CSS_SELECTOR, '.form-control.uniform-input.text')
+    PHONE = (By.CSS_SELECTOR, '#phone_mobile')
+    NICNAME = (By.CSS_SELECTOR, '#alias')
+    REG = (By.CSS_SELECTOR, '#submitAccount')
+    WELCOME = (By.CSS_SELECTOR, '.info-account')
+    EMAIL = (By.CSS_SELECTOR, '#email')
+    PASSW = (By.CSS_SELECTOR, '#passwd')
+    L_BUTTON = (By.CSS_SELECTOR, '#SubmitLogin')
+    DRESS = (By.XPATH, '//ul[@class="sf-menu clearfix menu-content sf-js-enabled sf-arrows"]/li[2]/a')
+    MODEL = (By.CSS_SELECTOR, '[class="ajax_block_product col-xs-12 col-sm-6 col-md-4 last-item-of-tablet-line"]')
+    ADD = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&add=1&id_product=4&token=a47889c863e19a33d7d4eb4b46d5d0b5"]')
+    CLOUSE_WINDOW = (By.CSS_SELECTOR, '.cross')
+    CART = (By.CSS_SELECTOR, '[class="shopping_cart"] [href="http://automationpractice.com/index.php?controller=order"]')
+    PRICE = (By.CSS_SELECTOR, '#product_price_4_16_472461')
+    EXIT = (By.CSS_SELECTOR, '.logout')
+    DELITE = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&delete=1&id_product=4&ipa=16&id_address_delivery=472461&token=a47889c863e19a33d7d4eb4b46d5d0b5"]')
+    MESSAGE = (By.XPATH, '//p[text()="Your shopping cart is empty."]')
+
+
+
 
 
 

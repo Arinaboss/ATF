@@ -9,26 +9,30 @@ class Iphone():
         self.url = url
         browser.get(url)
 
-    def search(self, browser):
-        search_box = browser.find_element(By.CSS_SELECTOR, ".fast-search__input")
+    def search(self):
+        search_box = self.browser.find_element(By.CSS_SELECTOR, ".fast-search__input")
         search_box.click()
         search_box.send_keys("iphone 12 pro")
 
-    def image(self, browser):
-        photo = browser.find_element(By.CSS_SELECTOR, ".result__wrapper :nth-child(3) img")
-        assert photo.is_displayed() == True, f"expect {photo} got {'blank screen'}"
+    def image(self):
+        self.browser.switch_to.frame(self.browser.find_element(By.CSS_SELECTOR, '.modal-iframe'))
+        photo = self.browser.find_element(By.CSS_SELECTOR,
+                                           '[src="//content2.onliner.by/catalog/device/header/01e04bb3519e9f859244d8df82104230.jpeg"]')
+        assert photo.is_displayed() == True, f"expect {'photo'} got {'blank screen'}"
 
-    def link_to_product(self, browser):
-        product = browser.find_element(By.XPATH, "//*[text()='Смартфон Apple iPhone 12 Pro 128GB (графитовый)']")
+    def link_to_product(self):
+        product = self.browser.find_element(By.CSS_SELECTOR, '[class="product__details"] [class="product__title"]')
         assert product.is_displayed() == True, f"expect {product} got {'empty field'}"
 
-    def description(self, browser):
-        description_product = browser.find_element(By.XPATH, "//a[text()='Apple iOS, экран 6.1' OLED (1170x2532), Apple A14 Bionic, ОЗУ 6 ГБ, флэш-память 128 ГБ, камера 12 Мп, аккумулятор 2775 мАч, '1 SIM']")
+    def description(self):
+        description_product = self.browser.find_element(By.CSS_SELECTOR, '[class="product__description"]')
         assert description_product.is_displayed() == True, f"expect {description_product} got {'empty field'}"
 
-    def price(self, browser):
-        price_phone = browser.find_element(By.CSS_SELECTOR, "[data-bind='html: $root.format.minPrice($data.prices, 'BYN')']")
+    def price(self):
+        price_phone = self.browser.find_element(By.CSS_SELECTOR, '.product__price-value.product__price-value_primary')
         assert price_phone.is_displayed() == True, f"expect{price_phone.text} got {'empty field'}"
 
 
-
+    def menu(self):
+        block_serch = self.browser.find_element(By.CSS_SELECTOR, '.search__content-wrapper')
+        assert block_serch.is_displayed() == True

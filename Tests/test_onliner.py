@@ -9,7 +9,7 @@ from Pages.seazonvar import Seazonvar
 import time
 
 
-link = "http://seasonvar.ru/"
+link = "https://www.onliner.by/"
 browser = None
 
 
@@ -18,6 +18,7 @@ def before():
     global browser
     browser = webdriver.Chrome()
     browser.maximize_window()
+    browser.implicitly_wait(10)
     browser.get(link)
 
     yield
@@ -25,14 +26,15 @@ def before():
         browser.quit()
 
 
-#def test_iphone(before):
-#    page = Iphone(browser, link)
-#    page.search(browser)
-#    time.sleep(4)
-#    page.image(browser)
-#    page.link_to_product(browser)
-#    page.description(browser)
-#    page.price(browser)
+def test_iphone():
+    global browser
+    page = Iphone(browser, link)
+    page.search()
+    page.image()
+    page.link_to_product()
+    page.description()
+    page.price()
+    page.menu()
 
 
 #def test_weather(before):
