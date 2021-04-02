@@ -1,4 +1,4 @@
-from Pages.lokators import NewsLokators
+from Pages.locators import NewsLokators
 
 class News():
     def __init__(self, browser, url):

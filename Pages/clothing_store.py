@@ -1,4 +1,4 @@
-from Pages.lokators import StoreLokators
+from Pages.locators import StoreLokators
 import time
 from selenium.webdriver.support.ui import Select
 

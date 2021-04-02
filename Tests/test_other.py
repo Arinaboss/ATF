@@ -6,6 +6,7 @@ import time
 link = "http://automationpractice.com/index.php"
 browser = None
 
+
 @pytest.fixture(autouse=True)
 def before():
     global browser
@@ -18,13 +19,9 @@ def before():
         browser.quit()
 
 
-def test_delite_cart():
+def test_delete_cart():
     page = Cart(browser, link)
     page.login()
     page.data()
     page.add_product()
     page.cart()
-
-
-
-

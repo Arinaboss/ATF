@@ -68,7 +68,7 @@ class StoreLokators():
     CART = (By.CSS_SELECTOR, '[class="shopping_cart"] [href="http://automationpractice.com/index.php?controller=order"]')
     PRICE = (By.CSS_SELECTOR, '#product_price_4_16_472461')
     EXIT = (By.CSS_SELECTOR, '.logout')
-    DELITE = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&delete=1&id_product=4&ipa=16&id_address_delivery=472461&token=a47889c863e19a33d7d4eb4b46d5d0b5"]')
+    DELETE_BUTTON = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&delete=1&id_product=4&ipa=16&id_address_delivery=472461&token=a47889c863e19a33d7d4eb4b46d5d0b5"]')
     MESSAGE = (By.XPATH, '//p[text()="Your shopping cart is empty."]')
 
 

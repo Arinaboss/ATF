@@ -1,4 +1,4 @@
-from Pages.lokators import WeatherLokators
+from Pages.locators import WeatherLokators
 import time
 
 

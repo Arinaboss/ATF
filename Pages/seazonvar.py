@@ -1,4 +1,4 @@
-from Pages.lokators import SeazonvarLocators
+from Pages.locators import SeazonvarLocators
 import time
 
 

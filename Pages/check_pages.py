@@ -1,4 +1,4 @@
-from Pages.lokators import StoreLokators
+from Pages.locators import StoreLokators
 from selenium.webdriver.common.action_chains import ActionChains
 
 
