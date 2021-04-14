@@ -70,8 +70,39 @@ class StoreLokators():
     EXIT = (By.CSS_SELECTOR, '.logout')
     DELITE = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&delete=1&id_product=4&ipa=16&id_address_delivery=472461&token=a47889c863e19a33d7d4eb4b46d5d0b5"]')
     MESSAGE = (By.XPATH, '//p[text()="Your shopping cart is empty."]')
+    SEARCH = (By.CSS_SELECTOR, '#search_query_top')
+    SEARCH_BUTTON = (By.CSS_SELECTOR, '.btn.btn-default.button-search')
+    BLOCK_SEARCH = (By.CSS_SELECTOR, '.product_list.grid.row')
+    LIST_DRESS = (By.CSS_SELECTOR, '[class="product-name"][title="Printed Dress"]')
+
+    WOMAN_MENU = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?id_category=3&controller=category"][title="Women"]')
+    BLOUSES = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?id_category=7&controller=category"][title="Blouses"]')
+    SEARCH_BLOUSES = (By.CSS_SELECTOR, '.cat-name')
+    CASUAL_DRESS = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?id_category=9&controller=category"][title="Casual Dresses"]')
+    NAVIGATION = (By.CSS_SELECTOR, '[class="ajax_block_product col-xs-12 col-sm-6 col-md-4 first-in-line last-line first-item-of-tablet-line first-item-of-mobile-line last-mobile-line"]')
+    ADD_IN_CART = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&add=1&id_product=3&token=a47889c863e19a33d7d4eb4b46d5d0b5"]')
+    CHECK_OUT = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=order"][class="btn btn-default button button-medium"]')
+    BUTTON_BUY = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=order&step=1"]')
+    PROCEED = (By.CSS_SELECTOR, '[name="processAddress"]')
+    CHECKBOX = (By.CSS_SELECTOR, '#cgv')
+    SHIPPING = (By.CSS_SELECTOR, '[name="processCarrier"]')
+    BANK = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?fc=module&module=bankwire&controller=payment"]')
+    CONFIRM = (By.CSS_SELECTOR, '[class="button btn btn-default button-medium"]')
+    DONE = (By.XPATH, '//strong[text()="Your order on My Store is complete."]')
 
 
+    BOX_BLACK_BLOUSES = (By.CSS_SELECTOR, '[class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-item-of-mobile-line"]')
+    BLACK_BLOUSES = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&add=1&id_product=2&token=e817bb0705dd58da8db074c69f729fd8"]')
+    CUNT_SHOPPING = (By.CSS_SELECTOR, '[class="continue btn btn-default button exclusive-medium"]')
+    PRINTED_DRESS = (By.CSS_SELECTOR, '[class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-in-line first-item-of-tablet-line last-item-of-mobile-line"]')
+    PRINTED_ADD = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&add=1&id_product=4&token=e817bb0705dd58da8db074c69f729fd8"]')
+    WHITE_BLACK_DRESS = (By.CSS_SELECTOR, '[class="ajax_block_product col-xs-12 col-sm-4 col-md-3 last-item-of-tablet-line first-item-of-mobile-line"]')
+    WBD_ADD = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&add=1&id_product=3&token=e817bb0705dd58da8db074c69f729fd8"]')
+    MINI_DEL = (By.CSS_SELECTOR,
+                '[href="http://automationpractice.com/index.php?controller=cart&delete=1&id_product=2&token=e817bb0705dd58da8db074c69f729fd8&ipa=7"]')
+    DEL_BLUES = (By.CSS_SELECTOR, '[href="http://automationpractice.com/index.php?controller=cart&delete=1&id_product=4&token=e817bb0705dd58da8db074c69f729fd8&ipa=16"]')
+    CHECK = (By.CSS_SELECTOR, '#button_order_cart')
+    QUANTITY = (By.CSS_SELECTOR, '#summary_products_quantity')
 
 
 
