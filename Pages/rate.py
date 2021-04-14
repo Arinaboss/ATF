@@ -1,4 +1,4 @@
-from Pages.lokators import RateLokators
+from Pages.locators import RateLokators
 
 class Rate():
     def __init__(self, browser, url):

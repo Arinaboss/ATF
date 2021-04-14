@@ -1,4 +1,4 @@
-from Pages.lokators import CatalogLokators
+from Pages.locators import CatalogLokators
 import time
 
 class Catalog():

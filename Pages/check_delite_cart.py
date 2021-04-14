@@ -1,9 +1,13 @@
-from Pages.lokators import StoreLokators
+from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException, TimeoutException
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
+
+from Pages.locators import StoreLokators
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 
-class Cart():
+class Cart:
     def __init__(self, browser, url):
         self.browser = browser
         self.url = url
@@ -39,10 +43,15 @@ class Cart():
         cart = self.browser.find_element(*StoreLokators.CART)
         self.browser.execute_script("return arguments[0].scrollIntoView(true);", cart)
         cart.click()
-        delite = self.browser.find_element(*StoreLokators.DELITE)
-        delite.click()
+        delete = self.browser.find_element(*StoreLokators.DELETE_BUTTON)
+        delete.click()
+        self.wait_el(StoreLokators.MESSAGE)
         message = self.browser.find_element(*StoreLokators.MESSAGE)
-        print('----------------------')
-        print(message.text)
-        print('----------------------')
-        assert message.is_displayed() == True, f"expect {'your cart empty'} got {'ne-a'}"
+        assert message.is_displayed(), f"expect your cart empty got ne-a"
+
+
+    def wait_element(self, locator):
+        ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
+        wait = WebDriverWait(self.browser, 15, ignored_exceptions=ignored_exceptions)
+        located = expected_conditions.visibility_of_element_located(locator)
+        wait.until(located)

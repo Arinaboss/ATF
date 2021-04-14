@@ -1,6 +1,6 @@
 import pytest
 from Pages.seazonvar import Seazonvar
-from Pages.lokators import SeazonvarLocators
+from Pages.locators import SeazonvarLocators
 from selenium import webdriver
 
 
